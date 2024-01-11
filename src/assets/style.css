@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cell {
+    @apply relative grid cursor-pointer place-items-center bg-white text-2xl font-bold transition-[1s] active:scale-95 active:bg-[#c2deff];
+  }
+
+  .active {
+    @apply bg-[#c2deff];
+  }
+
+  .badge {
+    @apply absolute bottom-0 right-0 bg-black p-0.5 text-sm text-white;
+  }
+
+  .board {
+    @apply grid grid-cols-3 grid-rows-3 gap-[0.5px] bg-[#161c24];
+  }
+
+  .sudoku {
+    @apply board h-[900px] w-[900px] gap-0.5 bg-black p-0.5;
+  }
+}
