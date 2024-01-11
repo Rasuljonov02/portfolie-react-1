@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.logo{
+ color: #FFF;
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 35px; /* 116.667% */
+}
+.logo1{
+ color: #FFF;
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 35px;
+}
+.home{
+ cursor: pointer;
+ color: rgba(255, 255, 255, 0.432);
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 35px; /* 194.444% */
+}
+.fr{
+ color: rgba(255, 255, 255, 0.50);
+ font-family: Poppins;
+ font-size: 24px;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 35px; /* 145.833% */
+}
+.ism{
+ color: #FFF;
+font-family: Poppins;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: 35px; /* 50% */
+}
+.text{
+ color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 35px; /* 175% */
+}
+.btn{
+ border-radius: 30px;
+ border: 3px solid #007CED;
+ background: #333;
+ padding: 10px 30px;
+ color: white;
+}
+.btn1{
+ color: white;
+ border-radius: 30px;
+border: 3px solid #D5D5D5;
+background: #333;
+padding: 10px 30px;
+
+}
+.btn:hover{
+ color: rgb(148, 139, 139);
+ border-radius: 30px;
+border: 3px solid #D5D5D5;
+background: #333;
+padding: 10px 30px;
+transition: all 0.3s;
+transform: scale(1.1);
+
+}
+.btn1:hover{
+ border-radius: 30px;
+ border: 3px solid #007CED;
+ background: #333;
+ padding: 10px 30px;
+ color: rgb(182, 172, 172);
+ transition: all 0.3s;
+transform: scale(1.1);
+}
+.liz{
+ color: rgba(255, 255, 255, 0.50);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 35px; /* 218.75% */
+}
