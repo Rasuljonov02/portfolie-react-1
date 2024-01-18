@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AOS from "aos";
 
 import "aos/dist/aos.css";
@@ -11,18 +11,10 @@ interface HomeProps {}
 
 const Hedr: React.FC<HomeProps> = () => {
 	const navigate = useNavigate();
-
-	const links: NodeListOf<HTMLParagraphElement> = document.querySelectorAll("#hedrlar")!;
-
-	links.forEach((link) => {
-		link.addEventListener("click", () => {
-			links.forEach((a) => {
-				a.classList.remove("active");
-			});
-
-			link.classList.add("active");
-		});
-	});
+	const [isActiveHome, setIsActiveHome] = React.useState(false);
+	const [isActiveFront, setIsActiveFront] = React.useState(false);
+	const [isActivePortfolio, setIsActivePortfolio] = React.useState(false);
+	const [isActiveContact, setIsActiveContact] = React.useState(false);
 
 	return (
 		<div>
@@ -35,22 +27,62 @@ const Hedr: React.FC<HomeProps> = () => {
 					data-aos="fade-down-right"
 					className="flex items-center w-[500px] justify-between gap-3"
 				>
-					<p
+					<Link
 						id="hedrlar"
-						onClick={() => navigate("/home")}
-						className="home active hover:text-white"
+						onClick={() => {
+							navigate("/home");
+							setIsActiveHome(true);
+							setIsActiveFront(false);
+							setIsActivePortfolio(false);
+							setIsActiveContact(false);
+						}}
+						className={`home ${isActiveHome && "active"} hover:text-white`}
+						to={"/home"}
 					>
 						Home
-					</p>
-					<p id="hedrlar" onClick={() => navigate("/front")} className="home hover:text-white">
+					</Link>
+					<Link
+						id="hedrlar"
+						onClick={() => {
+							navigate("/front");
+							setIsActiveHome(false);
+							setIsActiveFront(true);
+							setIsActivePortfolio(false);
+							setIsActiveContact(false);
+						}}
+						className={`home ${isActiveFront && "active"} hover:text-white`}
+						to={"/front"}
+					>
 						Front-end skills
-					</p>
-					<p id="hedrlar" onClick={() => navigate("/portfolio")} className="home hover:text-white">
+					</Link>
+					<Link
+						id="hedrlar"
+						onClick={() => {
+							navigate("/portfolio");
+							setIsActiveHome(false);
+							setIsActiveFront(false);
+							setIsActivePortfolio(true);
+							setIsActiveContact(false);
+						}}
+						className={`home ${isActivePortfolio && "active"} hover:text-white`}
+						to={"/portfolio"}
+					>
 						Portfolio
-					</p>
-					<p id="hedrlar" onClick={() => navigate("/contact")} className="home hover:text-white">
+					</Link>
+					<Link
+						id="hedrlar"
+						onClick={() => {
+							navigate("/contact");
+							setIsActiveHome(false);
+							setIsActiveFront(false);
+							setIsActivePortfolio(false);
+							setIsActiveContact(true);
+						}}
+						className={`home ${isActiveContact && "active"} hover:text-white`}
+						to={"/contact"}
+					>
 						Kontakt
-					</p>
+					</Link>
 				</div>
 			</div>
 		</div>
