@@ -33,7 +33,7 @@ const Footr = (props: HomeProps) => {
 				</div>
 
 				<div>
-					<p className="liz hover:text-white">© 2022 All rights reserved.</p>
+					<p className="liz hover:text-white">© 2024 All rights reserved.</p>
 				</div>
 			</div>
 		</div>
