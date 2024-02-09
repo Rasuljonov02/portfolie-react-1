@@ -7,7 +7,7 @@ const Portfolio = (props: PortfolioProps) => {
  return <>
 <Hedr/>
  <div id="portfolio">
-  <h1>Portfolie</h1>
+  <h1 className="text-white">Portfolie</h1>
  </div>
  <Footr/>
  </>

@@ -8,7 +8,7 @@ const Contact = (props: ContactProps) => {
 		<>
 			<Hedr />
 			<div id="contact">
-				<h1>Contact</h1>
+				<h1 className="text-white">Contact</h1>
 			</div>
 			<Footr />
 		</>
